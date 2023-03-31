@@ -22,7 +22,7 @@ import { InternalServerComponent } from './modules/error-pages/internal-server/i
 import { LazyLoadScriptService } from './shared/services/lazy-load-script.service';
 import { CarmemberEditComponent } from './modules/carmember/carmember-edit/carmember-edit/carmember-edit.component';
 import { CarmemberEditModule } from './modules/carmember/carmember-edit/carmember-edit.module';
-import { CarmemberdetailModule } from './modules/carmember/carmember-detail/carmemberdetail/carmemberdetail.module';
+import { CarmemberdetailModule } from './modules/carmember/carmember-detail/carmemberdetail.module';
 
 @NgModule({
   declarations: [
