@@ -6,7 +6,7 @@ import { CarmemberdetailComponent } from './carmemberdetail/carmemberdetail.comp
 const routes: Routes = [
 
   {
-    path: 'carmember',
+    path: 'carmemberdetail',
     component: LayoutMainComponent,
     children: [
       { path: '', component: CarmemberdetailComponent },

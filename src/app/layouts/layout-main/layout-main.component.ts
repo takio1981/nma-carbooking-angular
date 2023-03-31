@@ -45,5 +45,9 @@ export class LayoutMainComponent {
     this._lazyLoadService.loadScript('assets/zem/assets/plugins/datatable/responsive.bootstrap5.min.js');
     this._lazyLoadService.loadScript('assets/zem/assets/js/table-data.js');
 
+    // <!---Internal  Multislider js-->
+		this._lazyLoadService.loadScript('assets/plugins/multislider/multislider.js');
+		this._lazyLoadService.loadScript('assets/js/carousel.js');
+
   }
 }

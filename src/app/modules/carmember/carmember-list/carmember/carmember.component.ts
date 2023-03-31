@@ -26,20 +26,11 @@ export class CarmemberComponent {
     if(rs['ok']){
       console.log(rs['results'])
       this.carmemberlist = rs['results'];
-      // console.log(this.carmemberlist)
+      console.log(this.carmemberlist)
+      console.clear();
     }
   }
-
-  // async deleteCarMember(id: string){
-  //   await this.carmemberlistService.deleteCarMember(id).then((data) => {
-  //      console.log(data)
-  //      setTimeout(()=> {
-  //       this.getCarMemberList();
-  //      },500)
-  //   })
-  // }
-
-  // async editCarMember(id: string){    
-  //   this.carmemberlistService.navigate(['/editCarMember/'+ id])
-  // }
+  ngAfterViewInit(): void {
+    this.getCarMemberList();
+  }
 }

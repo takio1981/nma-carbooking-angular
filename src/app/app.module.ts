@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { CarmemberModule } from './modules/carmember/carmember-list/carmember.module';
 import { CarmemberaddModule } from './modules/carmember/carmember-add/carmemberadd.module';
+import { CarmemberEditModule } from './modules/carmember/carmember-edit/carmember-edit.module';
+import { CarmemberdetailModule } from './modules/carmember/carmember-detail/carmemberdetail.module';
 
 
 import { AppComponent } from './app.component';
@@ -21,8 +23,7 @@ import { NotFoundComponent } from './modules/error-pages/not-found/not-found.com
 import { InternalServerComponent } from './modules/error-pages/internal-server/internal-server.component';
 import { LazyLoadScriptService } from './shared/services/lazy-load-script.service';
 import { CarmemberEditComponent } from './modules/carmember/carmember-edit/carmember-edit/carmember-edit.component';
-import { CarmemberEditModule } from './modules/carmember/carmember-edit/carmember-edit.module';
-import { CarmemberdetailModule } from './modules/carmember/carmember-detail/carmemberdetail.module';
+
 
 @NgModule({
   declarations: [
