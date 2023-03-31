@@ -1,0 +1,43 @@
+<!-- Progress bar on scroll -->
+<div class="progress-top-bar"></div>
+
+<!-- Back-to-top -->
+<a href="#top" id="back-to-top" class="back-to-top rounded-circle shadow"><i class="las la-arrow-up"></i></a>
+
+<!-- Page -->
+<div class="page">
+
+    <div class="layout-position-binder">
+        <!-- main-header -->
+        <app-navbar></app-navbar>
+        <!-- /main-header -->
+
+        <!-- main-sidebar -->
+        <app-sidebar></app-sidebar>
+        <!-- main-sidebar -->
+    </div>
+
+    <!-- main-content -->
+    <div class="main-content app-content">
+        <!-- container -->
+        <div class="main-container container-fluid">
+
+            <!-- start content -->
+            <router-outlet></router-outlet>
+            <!-- end content -->
+
+        </div>
+        <!-- /Container -->
+    </div>
+    <!-- /main-content -->
+
+    <!-- Sidebar-right-->
+    <app-sidebar-right></app-sidebar-right>
+    <!--/Sidebar-right-->
+
+    <!-- Footer opened -->
+    <footer></footer>
+    <!-- Footer closed -->
+
+</div>
+<!-- End Page -->
