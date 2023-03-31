@@ -1,7 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LayoutMainComponent } from '@app/layouts/layout-main/layout-main.component';
+import { CarmemberEditComponent } from './carmember-edit/carmember-edit.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'carmemberedit',
+    component: LayoutMainComponent,
+    children: [
+      { path: '', component: CarmemberEditComponent },
+    ]
+  }
+
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
