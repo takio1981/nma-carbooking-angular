@@ -23,6 +23,7 @@ import { NotFoundComponent } from './modules/error-pages/not-found/not-found.com
 import { InternalServerComponent } from './modules/error-pages/internal-server/internal-server.component';
 import { LazyLoadScriptService } from './shared/services/lazy-load-script.service';
 import { CarmemberEditComponent } from './modules/carmember/carmember-edit/carmember-edit/carmember-edit.component';
+import { CarbookingComponent } from './modules/carbooking/carbooking.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { CarmemberEditComponent } from './modules/carmember/carmember-edit/carme
     NotFoundComponent,
     InternalServerComponent,
     SidebarRightComponent,
-    CarmemberEditComponent
+    CarmemberEditComponent,
+    CarbookingComponent
     
   ],
   imports: [
