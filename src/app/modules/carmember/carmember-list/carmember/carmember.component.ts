@@ -1,4 +1,5 @@
 import { Component ,OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 import { CarmemberlistService } from '@app/core/services/carmemberlist.service';
 import { LazyLoadScriptService } from '@app/shared/services/lazy-load-script.service';
 import { UtcConverterService } from '@app/shared/services/utc-converter.service';
@@ -12,7 +13,7 @@ export class CarmemberComponent {
  
   carmemberlist: any = [];
   // constructor(private carmemberlistService: CarmemberlistService){}
-  constructor(private _lazyLoadService: LazyLoadScriptService,private _dateConverter: UtcConverterService,private carmemberlistService: CarmemberlistService){
+  constructor(private _lazyLoadService: LazyLoadScriptService,private _dateConverter: UtcConverterService,private carmemberlistService: CarmemberlistService, private route:Router){
     // this.loadStyle();
     // this.loadScript();
   }
@@ -33,4 +34,20 @@ export class CarmemberComponent {
   ngAfterViewInit(): void {
     this.getCarMemberList();
   }
+
+  async deleteCarMember(car_id: string){
+    await this.carmemberlistService.deleteCarMember(car_id).then((data) => {
+       console.log(data)
+       setTimeout(()=> {
+        this.getCarMemberList();
+       },500)
+       
+    })
+
+  }
+
+  async editCarMember(car_id: string){    
+    this.route.navigate(['/editCarMember/'+ car_id])
+  }
+
 }
