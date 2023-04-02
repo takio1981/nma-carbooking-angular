@@ -72,10 +72,12 @@
             <a href="/carmemberadd" class="btn btn-success"><i class="fas fa-plus"></i> เพิ่มข้อมูล</a>
             <a href="/carmemberedit" class="btn btn-info"><i class="fas fa-download"></i> ส่งออกข้อมูล</a>
         </div>       
-        <table class="table table-hover table-bordered text-nowrap mb-0" id="responsiveDataTable">
+        <table class="table table-hover table-bordered text-nowrap border-bottom mb-0" id="responsiveDataTable">
+            <!-- class="table table-bordered text-nowrap border-bottom" -->
             <thead>
                 <tr>
-                    <th class="wd-10p">ลำดับ</th>
+                    <th class="wd-5p"></th>
+                    <th class="wd-5p">ลำดับ</th>
                     <th class="wd-15p">รหัสยานพาหนะ</th>
                     <th class="wd-20p">ทะเบียนรถ</th>
                     <th class="wd-20p">ภาพตัวอย่าง</th>
@@ -86,30 +88,60 @@
             </thead>
             <tbody>  
                 <tr *ngFor="let row of carmemberlist; let i = index" class="hover:bg-gray-100">
-                    <td>{{i+1}} </td>                    
-                    <td>{{row.hospcode}}-{{row.car_id}}</td>
-                    <td>{{row.car_number}}</td>
+                    <!-- <td><a href="/carmemberdetail" class="btn btn-secondary" title="รายละเอียด"><i class="fa fa-ellipsis-v"></i></a></td>                     -->
+                    <td name="bstable-actions"><div class="d-flex align-items-center">
+                        <button id="carmemberdetail" type="button" class="btn btn-sm btn-def tx-muted">
+                            <!-- <i class="fe fe-edit"> </i> -->
+                            <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                        <button id="bDel" type="button" class="btn btn-sm btn-def tx-muted" style="display:none;">
+                            <i class="fe fe-trash-2"> </i>
+                        </button>
+                        <button id="bAcep" type="button" class="btn btn-sm btn-def tx-muted" style="display:none;"> 
+                            <!-- style="display:none;" -->
+                            <i class="fe fe-check-circle"> </i>
+                        </button>
+                        <button id="bCanc" type="button" class="btn btn-sm btn-def tx-muted" style="display:none;">
+                            <i class="fe fe-x-circle"> </i>
+                        </button>
+                    </div></td>                    
+                    <td><span class="tx-16">{{i+1}}</span></td>                    
+                    <td><span class="tx-16">{{row.hospcode}}-{{row.car_id}}</span></td>
+                    <td><span class="tx-16">{{row.car_number}}</span></td>
                     <td class="flex items-center p-4 mr-12 space-x-6 whitespace-nowrap lg:p-5 lg:mr-0">
                         <img class="w-8 h-8 rounded" src="data:image/jpg;base64, {{ row.car_img }}" alt="">
                     </td>
-                    <td> ยี่ห้อ {{row.brand}} รุ่น {{row.model}} สี {{row.color}} ปี {{row.year}}</td>           
+                    <td><span class="tx-16">ยี่ห้อ {{row.brand}} รุ่น {{row.model}} สี {{row.color}} ปี {{row.year}}</span></td>           
                     <!-- <td>{{row.active}}</td> -->
-                    <td><div class="col-xl-auto col-lg-auto col-md-auto col-sm-12 order-1">
-                        <label for="intDropbox" class="mt-1" title="ใช้ / ไม่ใช้">
-                            <input type="checkbox" class="custom-switch-input" id="intDropbox" checked="{{row.active}}">
-                            <span class="custom-switch-indicator"></span>
-                        </label>
-                    </div></td>
                     <td>
+                        <label class="m-0 p-0">
+                            <span class=" tx-17 me-2"></span>
+                            <input type="checkbox" class="custom-switch-input">
+                            <span class="custom-switch-indicator custom-switch-indicator-lg"></span>
+                        </label>
+                    </td>
+                    <!-- <td>
                         <div class="btn-list">
-                            <a href="/carmemberdetail" class="btn btn-primary" title="รายละเอียด"><i class="fa fa-ellipsis"></i></a>
-                            <a href="/carmemberedit" class="btn btn-warning" title="แก้ไขข้อมูล"><i class="fa fa-edit"></i></a>
-                            <!-- <a href="" class="btn btn-danger" title="ลบข้อมูล" id = "deleteCarMember(row.car_id)"><i class="far fa-trash-alt"></i></a> -->
+                             <a href="/carmemberedit" class="btn btn-warning" title="แก้ไขข้อมูล"><i class="fa fa-edit"></i></a>
                             <button type="button" (click)="deleteCarMember(row.car_id)" data-modal-toggle="deleteCarMember" class="btn btn-danger">
                                 <i class="far fa-trash-alt"></i>
                             </button>
                         </div>
-                    </td>
+                    </td> -->
+                    <td name="bstable-actions"><div class="d-flex align-items-center">
+                        <button id="bEdit" type="button" class="btn btn-sm btn-def tx-muted">
+                            <i class="fe fe-edit"> </i>
+                        </button>
+                        <button id="bDel" type="button" class="btn btn-sm btn-def tx-muted">
+                            <i class="fe fe-trash-2"> </i>
+                        </button>
+                        <button id="bAcep" type="button" class="btn btn-sm btn-def tx-muted" style="display:none;">
+                            <i class="fe fe-check-circle"> </i>
+                        </button>
+                        <button id="bCanc" type="button" class="btn btn-sm btn-def tx-muted" style="display:none;">
+                            <i class="fe fe-x-circle"> </i>
+                        </button>
+                    </div></td>
                     
                 </tr>                 
             </tbody>
