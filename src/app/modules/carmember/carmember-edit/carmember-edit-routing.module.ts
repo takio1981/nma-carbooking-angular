@@ -5,7 +5,7 @@ import { CarmemberEditComponent } from './carmember-edit/carmember-edit.componen
 
 const routes: Routes = [
   {
-    path: 'carmemberedit',
+    path: 'carmemberedit/:id',
     component: LayoutMainComponent,
     children: [
       { path: '', component: CarmemberEditComponent },

@@ -49,5 +49,12 @@ export class LayoutMainComponent {
 		this._lazyLoadService.loadScript('assets/plugins/multislider/multislider.js');
 		this._lazyLoadService.loadScript('assets/js/carousel.js');
 
+    // <!--Internal Fancy uploader js-->
+		this._lazyLoadService.loadScript('/assets/plugins/fancyuploder/jquery.ui.widget.js');
+    this._lazyLoadService.loadScript('/assets/plugins/fancyuploder/jquery.fileupload.js');
+    this._lazyLoadService.loadScript('/assets/plugins/fancyuploder/jquery.iframe-transport.js');
+    this._lazyLoadService.loadScript('/assets/plugins/fancyuploder/jquery.fancy-fileupload.js');
+    this._lazyLoadService.loadScript('/assets/plugins/fancyuploder/fancy-uploader.js');
+
   }
 }

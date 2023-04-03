@@ -1,718 +1,118 @@
-<p>carmemberadd works!</p>
-<div class="main-container container-fluid" data-select2-id="21">
-
-    <!-- breadcrumb -->
-    <div class="breadcrumb-header justify-content-between">
-        <div class="left-content">
-        <span class="main-content-title mg-b-0 mg-b-lg-1">FORM ELEMENTS</span>
+<!-- <h1>carmemberadd works!</h1> -->
+<!-- row -->
+<div class="col-lg-12 col-md-12">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">เพิ่มข้อมูลรถยนต์</div>
         </div>
-        <div class="justify-content-center mt-2">
-            <ol class="breadcrumb breadcrumb-style3">
-                <li class="breadcrumb-item tx-15"><a href="/carmember">CarMemberList</a></li>
-                <li class="breadcrumb-item active" aria-current="page">CarMember-Add</li>
-            </ol>
+        <div class="card-body">
+            <form class="row needs-validation" novalidate>
+                <div class="col-md-2 position-relative">
+                    <label for="car_id" class="form-label">ID</label>
+                    <input type="text" class="form-control" id="car_id" value="" disabled>
+                    <div class="valid-tooltip">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-2 position-relative">
+                    <label for="car_number" class="form-label">เลขทะเบียนรถยนต์</label>
+                    <input type="text" class="form-control" id="car_number" value="" required>
+                    <div class="valid-tooltip">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-2 position-relative">
+                    <label for="regist_num" class="form-label">เลขทะเบียนครุภัณฑ์</label>
+                    <div class="input-group has-validation">
+                        <!-- <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span> -->
+                        <input type="text" class="form-control" id="regist_num" required>
+                        <div class="invalid-tooltip">
+                            กรุณากรอกข้อมูลเลขทะเบียนครุภัณฑ์
+                        </div>
+                    </div>
+                </div>                
+                <div class="col-md-3 position-relative">
+                    <label for="brand" class="form-label">ยี่ห้อ</label>
+                    <select class="form-select" id="brand" required>
+                        <option selected disabled value="">เลือกยี่ห้อรถ....</option>
+                        <option value="1">Toyota</option>
+                        <option value="2">Mitsubichi</option>
+                        <option value="3">Mazda</option>
+                        <option value="4">Honda</option>
+                    </select>
+                    <div class="invalid-tooltip">
+                        กรุณาเลือกยี่ห้อรถของท่าน.
+                    </div>
+                </div>
+                <div class="col-md-3 position-relative">
+                    <label for="model" class="form-label">รุ่น</label>
+                    <input type="text" class="form-control" id="model" required>
+                    <div class="invalid-tooltip">
+                        กรุณาใส่รุ่นของรถ
+                    </div>
+                </div>
+                <div class="col-md-2 position-relative">
+                    <label for="year" class="form-label">ปีผลิต</label>
+                    <input type="text" class="form-control" id="year" required>
+                    <div class="invalid-tooltip">
+                        กรุณาใส่ปีผลิตรถ
+                    </div>
+                </div>
+                <div class="col-md-2 position-relative">
+                    <label for="year" class="form-label">ปีจัดซื้อ</label>
+                    <input type="text" class="form-control" id="year" required>
+                    <div class="invalid-tooltip">
+                        กรุณาใส่ปีจัดซื้อของรถ
+                    </div>
+                </div>
+                <div class="col-md-3 position-relative">
+                    <label for="brand" class="form-label">สีตัวถังรถ</label>
+                    <select class="form-select" id="brand" required>
+                        <option selected disabled value="">เลือกสีตัวถังรถ....</option>
+                        <option value="1">เทา</option>
+                        <option value="2">ขาว</option>
+                        <option value="3">ดำ</option>
+                        <option value="4">ทอง</option>
+                    </select>
+                    <div class="invalid-tooltip">
+                        กรุณาเลือกสีตัวถังรถของท่าน.
+                    </div>
+                </div>
+                <div class="col-md-12 position-relative">
+                    <label for="detail" class="form-label">รายละเอียดอื่นๆ</label>
+                    <input type="text" class="form-control" id="detail">
+                    <div class="invalid-tooltip">
+                        รายละเอียดข้อมูลอื่นๆ
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="detail" class="form-label">รูปภาพหน้ารถ</label>
+                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="detail" class="form-label">รูปภาพด้านซ้าย</label>
+                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="detail" class="form-label">รูปภาพด้านขวา</label>
+                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="detail" class="form-label">รูปภาพภายใน 1</label>
+                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="detail" class="form-label">รูปภาพภายใน 2</label>
+                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <label for="detail" class="form-label">รูปภาพภายใน 3</label>
+                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary mt-3" type="submit">บันทึก</button>
+                </div>
+            </form>
         </div>
     </div>
-    <!-- /breadcrumb -->
-
-        <!-- row -->
-        <div class="row">
-            <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Default Form</div>
-                    </div>
-                    <div class="card-body">
-                        <form class="form-horizontal">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="inputName" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                            </div>
-                            <div class="form-group mb-0 justify-content-end">
-                                <div class="checkbox">
-                                    <div class="custom-checkbox custom-control">
-                                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="chekOut">
-                                        <label for="chekOut" class="custom-control-label mt-1">Check me Out</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group mb-0 mt-3">
-                                <div class="btn-list">
-                                    <a href="javascript:void(0)" class="btn btn-primary" role="button">Sign in</a>
-                                    <a href="javascript:void(0)" class="btn btn-secondary" role="button">Cancel</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
-                <div class="card ">
-                    <div class="card-header">
-                        <div class="card-title">Vertical Form</div>
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="">
-                                <div class="form-group">
-                                    <label for="inpEmail">Email address</label>
-                                    <input type="email" class="form-control" id="inpEmail" placeholder="Enter email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="inpPassword">Password</label>
-                                    <input type="password" class="form-control" id="inpPassword" placeholder="Password">
-                                </div>
-                                <div class="checkbox">
-                                    <div class="custom-checkbox custom-control">
-                                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="chkOut">
-                                        <label for="chkOut" class="custom-control-label mt-1">Check me Out</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="javascript:void(0)" class="btn btn-primary mt-3 mb-0" role="button">Submit</a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- row -->
-
-        <!-- row -->
-        <div class="row" data-select2-id="20">
-            <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
-                <!--div-->
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Form Input and Textarea
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg">
-                                <input class="form-control" placeholder="Input box" type="text">
-                            </div>
-                            <div class="col-lg mg-t-10 mg-lg-t-0">
-                                <input class="form-control" placeholder="Input box (readonly)" readonly="" type="text">
-                            </div>
-                            <div class="col-lg mg-t-10 mg-lg-t-0">
-                                <input class="form-control" disabled="" placeholder="Input box (disabled)" type="text">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg mg-t-10">
-                                <textarea class="form-control" placeholder="Textarea" rows="3"></textarea>
-                            </div>
-                            <div class="col-lg mg-t-10">
-                                <textarea class="form-control" placeholder="Textarea (readonly)" readonly="" rows="3"></textarea>
-                            </div>
-                            <div class="col-lg mg-t-10">
-                                <textarea class="form-control" disabled="" placeholder="Texarea (disabled)" rows="3"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/div-->
-
-            <!--div-->
-            <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Form Input Sizes</div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg">
-                                <input class="form-control form-control-sm mg-b-10" placeholder="Input sm box" type="text">
-                                <input class="form-control mg-b-10" placeholder="Input box" type="text">
-                                <input class="form-control form-control-lg" placeholder="Input lg box" type="text">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/div-->
-
-            <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Valid State Input</div>
-                    </div>
-                    <div class="card-body">
-                        <form class="needs-validation was-validated">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="form-group has-success mg-b-0">
-                                        <input class="form-control" placeholder="Input box (success state)" required="" type="text" value="This is input">
-                                        <textarea class="form-control mg-t-10" placeholder="Textarea (success state)" required="" rows="3">This is textarea</textarea>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mg-t-20 mg-lg-t-0">
-                                    <div class="form-group has-danger mg-b-0">
-                                        <input class="form-control" placeholder="Input box (invalid state)" required="" type="text">
-                                        <textarea class="form-control mg-t-10" placeholder="Textarea (invalid state)" required="" rows="3"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!--/div-->
-
-            <!--div-->
-            <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">File Browser</div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <div class="mb-3">
-                                <label for="formFile" class="form-label">Default file input example</label>
-                                <input class="form-control" type="file" id="formFile">
-                                </div>
-                                <div class="mb-3">
-                                <label for="formFileMultiple" class="form-label">Multiple files input example</label>
-                                <input class="form-control" type="file" id="formFileMultiple" multiple="">
-                                </div>
-                                <div class="mb-3">
-                                <label for="formFileDisabled" class="form-label">Disabled file input example</label>
-                                <input class="form-control" type="file" id="formFileDisabled" disabled="">
-                                </div>
-                                <div class="mb-3">
-                                <label for="formFileSm" class="form-label">Small file input example</label>
-                                <input class="form-control form-control-sm" id="formFileSm" type="file">
-                                </div>
-                                <div>
-                                <label for="formFileLg" class="form-label">Large file input example</label>
-                                <input class="form-control form-control-lg" id="formFileLg" type="file">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/div-->
-
-
-            <!--div-->
-            <div class="col-md-12 col-xl-12 col-xxl-6 col-xs-12 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Custom Checkboxes &amp; Radios
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <label class="ckbox"><input type="checkbox"><span>Checkbox Unchecked</span></label>
-                            </div>
-                            <div class="col-lg-4">
-                                <label class="ckbox"><input checked="" type="checkbox"><span>Checkbox Checked</span></label>
-                            </div>
-                            <div class="col-lg-4">
-                                <label class="ckbox"><input disabled="" type="checkbox"><span>Checkbox Disabled</span></label>
-                            </div>
-                        </div>
-                        <div class="row mg-t-15">
-                            <div class="col-lg-4">
-                                <label class="rdiobox"><input name="rdio" type="radio"> <span>Radio Unchecked</span></label>
-                            </div>
-                            <div class="col-lg-4">
-                                <label class="rdiobox"><input checked="" name="rdio" type="radio"> <span>Radio Checked</span></label>
-                            </div>
-                            <div class="col-lg-4">
-                                <label class="rdiobox"><input disabled="" name="rdio" type="radio"> <span>Radio Disabled</span></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/div-->
-
-            <!--div-->
-            <div class="col-md-12 col-xl-12 col-xxl-6  col-xs-12 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Toggle Switches</div>
-                    </div>
-                    <div class="card-body">
-                        <div class="main-toggle-group-demo">
-                            <div class="main-toggle">
-                                <span></span>
-                            </div>
-                            <div class="main-toggle main-toggle-secondary">
-                                <span></span>
-                            </div>
-                            <div class="main-toggle main-toggle-success">
-                                <span></span>
-                            </div>
-                            <div class="main-toggle main-toggle-dark">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="main-toggle-group-demo mg-t-10">
-                            <div class="main-toggle on">
-                                <span></span>
-                            </div>
-                            <div class="main-toggle main-toggle-secondary on">
-                                <span></span>
-                            </div>
-                            <div class="main-toggle main-toggle-success on">
-                                <span></span>
-                            </div>
-                            <div class="main-toggle main-toggle-dark on">
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/div-->
-
-            <!--div-->
-            <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Input Groups</div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text" id="basic-addon1">@</span>
-                                    <input aria-describedby="basic-addon1" aria-label="Username" class="form-control" placeholder="Username" type="text">
-                                </div><!-- input-group -->
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="input-group mb-3">
-                                    <input aria-describedby="basic-addon2" aria-label="Recipient's username" class="form-control" placeholder="Recipient's username" type="text">
-                                    <span class="input-group-text" id="basic-addon2">@example.com</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="input-group mb-3">
-                                    <span class="input-group-text">$</span>
-                                    <input aria-label="Amount (to the nearest dollar)" class="form-control" type="text">
-                                    <span class="input-group-text">.00</span>
-                                </div><!-- input-group -->
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="input-group">
-                                    <div class="input-group-text">
-                                        <label class="ckbox wd-16 mg-b-0"><input class="mg-0" type="checkbox"><span></span></label>
-                                    </div>
-                                    <input class="form-control" placeholder="Text input with checkbox" type="text">
-                                </div><!-- input-group -->
-                            </div><!-- col-4 -->
-                            <div class="col-lg-4 mg-t-20 mg-lg-t-0">
-                                <div class="input-group">
-                                    <div class="input-group-text">
-                                        <label class="rdiobox wd-16 mg-b-0"><input type="radio"><span></span></label>
-                                    </div>
-                                    <input class="form-control" placeholder="Text input with radiobox" type="text">
-                                </div><!-- input-group -->
-                            </div><!-- col-4 -->
-                            <div class="col-lg-4 mg-t-20 mg-lg-t-0">
-                                <div class="input-group">
-                                    <input class="form-control" placeholder="Search for..." type="text">
-                                    <button class="btn btn-primary br-ts-0 br-bs-0" type="button"><i class="fa fa-search"></i></button>
-                                </div><!-- input-group -->
-                            </div><!-- col-4 -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/div-->
-
-            <!--div-->
-            <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">Input Mask</div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="input-group">
-                                    <div class="input-group-text">
-                                        Date:
-                                    </div>
-                                    <input class="form-control" id="dateMask" placeholder="MM/DD/YYYY" type="text">
-                                </div><!-- input-group -->
-                            </div><!-- col-4 -->
-                            <div class="col-lg-3 mg-t-20 mg-lg-t-0">
-                                <div class="input-group">
-                                    <div class="input-group-text">
-                                        Phone:
-                                    </div>
-                                <input class="form-control" id="phoneMask" placeholder="(000) 000-0000" type="text">
-                                </div><!-- input-group -->
-                            </div>
-                            <div class="col-lg-4 mg-t-20 mg-lg-t-0">
-                                <div class="input-group">
-                                    <div class="input-group-text">
-                                        Phone + Ext.:
-                                    </div>
-                                <input class="form-control" id="phoneExtMask" placeholder="(000) 000-0000 ext 0000" type="text">
-                                </div><!-- input-group -->
-                            </div>
-                            <div class="col-lg-2 mg-t-20 mg-lg-t-0">
-                                <div class="input-group">
-                                    <div class="input-group-text">
-                                        SSN:
-                                    </div><!-- input-group-text -->
-                                    <input class="form-control" id="ssnMask" placeholder="000-00-0000" type="text">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/div-->
-
-            <!--div-->
-            <div class="col-xl-3">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Basic Date picker
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-text">
-                                    <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
-                                </div>
-                                <input type="text" class="form-control flatpickr-input" id="date" placeholder="Choose date" readonly="readonly">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Date picker With Time
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-text">
-                                    <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
-                                </div>
-                                <input type="text" class="form-control flatpickr-input" id="datetime" placeholder="Choose date with time" readonly="readonly">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Human Friendly dates
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-text">
-                                    <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
-                                </div>
-                                <input type="hidden" class="form-control flatpickr-input" id="humanfrienndlydate" placeholder="Human friendly dates"><input class="form-control form-control input" placeholder="Human friendly dates" tabindex="0" type="text" readonly="readonly">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Date range picker
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-text">
-                                    <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
-                                </div>
-                                <input type="text" class="form-control flatpickr-input" id="daterange" placeholder="Date range picker" readonly="readonly">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--div-->
-
-            <!--div-->
-            <div class="col-xl-3">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Basic Time picker
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-text">
-                                    <i class="typcn typcn-stopwatch tx-24 lh--9 op-6"></i>
-                                </div>
-                                <input type="text" class="form-control flatpickr-input" id="timepikcr" placeholder="Choose time" readonly="readonly">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Time Pickr with 24hr Format
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-text">
-                                    <i class="typcn typcn-stopwatch tx-24 lh--9 op-6"></i>
-                                </div>
-                                <input type="text" class="form-control flatpickr-input" id="timepickr1" placeholder="Choose time in 24hr format" readonly="readonly">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Time Picker with Limits
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-text">
-                                    <i class="typcn typcn-stopwatch tx-24 lh--9 op-6"></i>
-                                </div>
-                                <input type="text" class="form-control flatpickr-input" id="limittime" placeholder="choose time min 16:00 to max 22:30" readonly="readonly">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            DateTimePicker with Limited Time Range
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-text">
-                                    <i class="typcn typcn-stopwatch tx-24 lh--9 op-6"></i>
-                                </div>
-                                <input type="text" class="form-control flatpickr-input" id="limitdatetime" placeholder="date with time limit from 16:00 to 22:00" readonly="readonly">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--div-->
-
-            <!--div-->
-            <div class="col-xxl-6">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Inline Calendar
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <input type="text" class="form-control flatpickr-input" id="inlinecalendar" placeholder="Choose date" readonly="readonly"><div class="flatpickr-calendar animate inline" tabindex="-1"><div class="flatpickr-months"><span class="flatpickr-prev-month"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M5.207 8.471l7.146 7.147-0.707 0.707-7.853-7.854 7.854-7.853 0.707 0.707-7.147 7.146z"></path></svg></span><div class="flatpickr-month"><div class="flatpickr-current-month"><select class="flatpickr-monthDropdown-months" aria-label="Month" tabindex="-1"><option class="flatpickr-monthDropdown-month" value="0" tabindex="-1">January</option><option class="flatpickr-monthDropdown-month" value="1" tabindex="-1">February</option><option class="flatpickr-monthDropdown-month" value="2" tabindex="-1">March</option><option class="flatpickr-monthDropdown-month" value="3" tabindex="-1">April</option><option class="flatpickr-monthDropdown-month" value="4" tabindex="-1">May</option><option class="flatpickr-monthDropdown-month" value="5" tabindex="-1">June</option><option class="flatpickr-monthDropdown-month" value="6" tabindex="-1">July</option><option class="flatpickr-monthDropdown-month" value="7" tabindex="-1">August</option><option class="flatpickr-monthDropdown-month" value="8" tabindex="-1">September</option><option class="flatpickr-monthDropdown-month" value="9" tabindex="-1">October</option><option class="flatpickr-monthDropdown-month" value="10" tabindex="-1">November</option><option class="flatpickr-monthDropdown-month" value="11" tabindex="-1">December</option></select><div class="numInputWrapper"><input class="numInput cur-year" type="number" tabindex="-1" aria-label="Year"><span class="arrowUp"></span><span class="arrowDown"></span></div></div></div><span class="flatpickr-next-month"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 17"><g></g><path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z"></path></svg></span></div><div class="flatpickr-innerContainer"><div class="flatpickr-rContainer"><div class="flatpickr-weekdays"><div class="flatpickr-weekdaycontainer">
-<span class="flatpickr-weekday">
-Sun</span><span class="flatpickr-weekday">Mon</span><span class="flatpickr-weekday">Tue</span><span class="flatpickr-weekday">Wed</span><span class="flatpickr-weekday">Thu</span><span class="flatpickr-weekday">Fri</span><span class="flatpickr-weekday">Sat
-</span>
-</div></div><div class="flatpickr-days" tabindex="-1"><div class="dayContainer"><span class="flatpickr-day prevMonthDay" aria-label="February 26, 2023" tabindex="-1">26</span><span class="flatpickr-day prevMonthDay" aria-label="February 27, 2023" tabindex="-1">27</span><span class="flatpickr-day prevMonthDay" aria-label="February 28, 2023" tabindex="-1">28</span><span class="flatpickr-day" aria-label="March 1, 2023" tabindex="-1">1</span><span class="flatpickr-day" aria-label="March 2, 2023" tabindex="-1">2</span><span class="flatpickr-day" aria-label="March 3, 2023" tabindex="-1">3</span><span class="flatpickr-day" aria-label="March 4, 2023" tabindex="-1">4</span><span class="flatpickr-day" aria-label="March 5, 2023" tabindex="-1">5</span><span class="flatpickr-day" aria-label="March 6, 2023" tabindex="-1">6</span><span class="flatpickr-day" aria-label="March 7, 2023" tabindex="-1">7</span><span class="flatpickr-day" aria-label="March 8, 2023" tabindex="-1">8</span><span class="flatpickr-day" aria-label="March 9, 2023" tabindex="-1">9</span><span class="flatpickr-day" aria-label="March 10, 2023" tabindex="-1">10</span><span class="flatpickr-day" aria-label="March 11, 2023" tabindex="-1">11</span><span class="flatpickr-day" aria-label="March 12, 2023" tabindex="-1">12</span><span class="flatpickr-day" aria-label="March 13, 2023" tabindex="-1">13</span><span class="flatpickr-day" aria-label="March 14, 2023" tabindex="-1">14</span><span class="flatpickr-day" aria-label="March 15, 2023" tabindex="-1">15</span><span class="flatpickr-day" aria-label="March 16, 2023" tabindex="-1">16</span><span class="flatpickr-day" aria-label="March 17, 2023" tabindex="-1">17</span><span class="flatpickr-day" aria-label="March 18, 2023" tabindex="-1">18</span><span class="flatpickr-day" aria-label="March 19, 2023" tabindex="-1">19</span><span class="flatpickr-day" aria-label="March 20, 2023" tabindex="-1">20</span><span class="flatpickr-day" aria-label="March 21, 2023" tabindex="-1">21</span><span class="flatpickr-day" aria-label="March 22, 2023" tabindex="-1">22</span><span class="flatpickr-day" aria-label="March 23, 2023" tabindex="-1">23</span><span class="flatpickr-day" aria-label="March 24, 2023" tabindex="-1">24</span><span class="flatpickr-day" aria-label="March 25, 2023" tabindex="-1">25</span><span class="flatpickr-day" aria-label="March 26, 2023" tabindex="-1">26</span><span class="flatpickr-day" aria-label="March 27, 2023" tabindex="-1">27</span><span class="flatpickr-day" aria-label="March 28, 2023" tabindex="-1">28</span><span class="flatpickr-day" aria-label="March 29, 2023" tabindex="-1">29</span><span class="flatpickr-day today" aria-label="March 30, 2023" aria-current="date" tabindex="-1">30</span><span class="flatpickr-day" aria-label="March 31, 2023" tabindex="-1">31</span><span class="flatpickr-day nextMonthDay" aria-label="April 1, 2023" tabindex="-1">1</span><span class="flatpickr-day nextMonthDay" aria-label="April 2, 2023" tabindex="-1">2</span><span class="flatpickr-day nextMonthDay" aria-label="April 3, 2023" tabindex="-1">3</span><span class="flatpickr-day nextMonthDay" aria-label="April 4, 2023" tabindex="-1">4</span><span class="flatpickr-day nextMonthDay" aria-label="April 5, 2023" tabindex="-1">5</span><span class="flatpickr-day nextMonthDay" aria-label="April 6, 2023" tabindex="-1">6</span><span class="flatpickr-day nextMonthDay" aria-label="April 7, 2023" tabindex="-1">7</span><span class="flatpickr-day nextMonthDay" aria-label="April 8, 2023" tabindex="-1">8</span></div></div></div></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6">
-                <div class="col-xl-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">
-                                Date Picker with week numbers
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="form-group mb-0">
-                                <div class="input-group">
-                                    <div class="input-group-text">
-                                        <i class="typcn typcn-calendar-outline tx-24 lh--9 op-6"></i>
-                                    </div>
-                                    <input type="text" class="form-control flatpickr-input" id="weeknum" placeholder="Choose date" readonly="readonly">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">
-                                Inline Time Picker
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="form-group mb-0">
-                                <input type="text" class="form-control flatpickr-input" id="inlinetime" placeholder="Choose time" readonly="readonly"><div class="flatpickr-calendar hasTime noCalendar animate inline" tabindex="-1"><div class="flatpickr-time" tabindex="-1"><div class="numInputWrapper"><input class="numInput flatpickr-hour" type="number" aria-label="Hour" tabindex="-1" step="1" min="1" max="12" maxlength="2"><span class="arrowUp"></span><span class="arrowDown"></span></div><span class="flatpickr-time-separator">:</span><div class="numInputWrapper"><input class="numInput flatpickr-minute" type="number" aria-label="Minute" tabindex="-1" step="5" min="0" max="59" maxlength="2"><span class="arrowUp"></span><span class="arrowDown"></span></div><span class="flatpickr-am-pm" title="Click to toggle" tabindex="-1">PM</span></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">
-                                Preloading time
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="form-group mb-0">
-                                <div class="input-group">
-                                    <div class="input-group-text">
-                                        <i class="typcn typcn-stopwatch tx-24 lh--9 op-6"></i>
-                                    </div>
-                                    <input type="text" class="form-control flatpickr-input" id="pretime" placeholder="Preloading time" readonly="readonly">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--div-->
-
-            <!--div-->
-            <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Color Picker
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="container  p-0 p-md-5">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <div class="theme-container"><button class="active">classic</button></div>
-                                    <div class="pickr-container"><div class="pickr">
-
-<button type="button" class="pcr-button" role="button" aria-label="toggle color picker dialog" style="--pcr-color:rgba(108, 95, 252, 1);"></button>
-
-
-</div></div>
-                                </div>
-                                <div>
-                                    <div class="theme-container1"><button class="active">monolith</button></div>
-                                    <div class="pickr-container1"><div class="pickr">
-
-<button type="button" class="pcr-button" role="button" aria-label="toggle color picker dialog" style="--pcr-color:rgba(252, 82, 150, 1);"></button>
-
-
-</div></div>
-                                </div>
-                                <div>
-                                    <div class="theme-container2"><button class="active">nano</button></div>
-                                    <div class="pickr-container2"><div class="pickr">
-
-<button type="button" class="pcr-button" role="button" aria-label="toggle color picker dialog" style="--pcr-color:rgba(5, 195, 251, 1);"></button>
-
-
-</div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/div-->
-
-            <!--div-->
-            <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12" data-select2-id="19">
-                <div class="card" data-select2-id="18">
-                    <div class="card-header">
-                        <div class="card-title">
-                            Select
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label class="form-label">Default Select</label>
-                            <select name="country" class="form-control form-select" data-bs-placeholder="Select Country">
-                                <option value="br">Brazil</option>
-                                <option value="cz">Czech Republic</option>
-                                <option value="de">Germany</option>
-                                <option value="pl" selected="">Poland</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Customize Select</label>
-                            <select name="country" class="form-control form-select select2 select2-hidden-accessible" data-bs-placeholder="Select Country" data-select2-id="1" tabindex="-1" aria-hidden="true">
-                                <option value="br">Brazil</option>
-                                <option value="cz">Czech Republic</option>
-                                <option value="de">Germany</option>
-                                <option value="pl" selected="" data-select2-id="3">Poland</option>
-                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="2" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-country-jn-container"><span class="select2-selection__rendered" id="select2-country-jn-container" role="textbox" aria-readonly="true" title="Poland">Poland</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Select2 with image</label>
-                            <select name="members" class="form-control select2 select2-img select2-hidden-accessible" data-bs-placeholder="Selct One" data-select2-id="4" tabindex="-1" aria-hidden="true">
-                                <option label="Choose one" data-select2-id="10"></option>
-                                <option value="1" selected="" data-select2-id="6">Angeline Julliet</option>
-                                <option value="2" data-select2-id="11">Helena Rose</option>
-                                <option value="13" data-select2-id="12">Daniel Obrien</option>
-                                <option value="15" data-select2-id="13">Jorah Randy</option>
-                                <option value="3" data-select2-id="14">Emma Watson</option>
-                                <option value="5" data-select2-id="15">Bonny Benett</option>
-                            </select><span class="select2 select2-container select2-container--default select2-container--above select2-container--focus" dir="ltr" data-select2-id="16" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-members-j8-container"><span class="select2-selection__rendered" id="select2-members-j8-container" role="textbox" aria-readonly="true" title="Angeline Julliet"><span class="d-flex align-items-center"><img src="../assets/img/faces/1.jpg" class="rounded-circle avatar-xs me-1"> Angeline Julliet</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Disabled Select</label>
-                            <select name="country" class="form-control form-select select2 select2-hidden-accessible" data-bs-placeholder="Select Country" disabled="" data-select2-id="7" tabindex="-1" aria-hidden="true">
-                                    <option value="br">Brazil</option>
-                                    <option value="cz">Czech Republic</option>
-                                    <option value="de">Germany</option>
-                                    <option value="pl" selected="" data-select2-id="9">Poland</option>
-                            </select><span class="select2 select2-container select2-container--default select2-container--disabled" dir="ltr" data-select2-id="8" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-labelledby="select2-country-du-container"><span class="select2-selection__rendered" id="select2-country-du-container" role="textbox" aria-readonly="true" title="Poland">Poland</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/div-->
-
-        </div>
-        <!-- row closed -->
-    </div>
+</div>
