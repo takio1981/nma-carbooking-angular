@@ -6,7 +6,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
   {  path: 'home',  component: LayoutMainComponent,children: [{ path: '', component: DashboardComponent }]},
-  {  path: 'booking',  component: BookingComponent}
+  {  path: 'booking', component: LayoutMainComponent ,children: [{ path: '',component: BookingComponent}]}
 ];
 
 @NgModule({
