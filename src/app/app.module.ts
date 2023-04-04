@@ -7,10 +7,6 @@ import { AuthModule } from './modules/auth/auth.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { CarmemberModule } from './modules/carmember/carmember-list/carmember.module';
-import { CarmemberaddModule } from './modules/carmember/carmember-add/carmemberadd.module';
-import { CarmemberEditModule } from './modules/carmember/carmember-edit/carmember-edit.module';
-import { CarmemberdetailModule } from './modules/carmember/carmember-detail/carmemberdetail.module';
 
 
 import { AppComponent } from './app.component';
@@ -23,7 +19,7 @@ import { SidebarRightComponent } from './layouts/sidebar-right/sidebar-right.com
 import { NotFoundComponent } from './modules/error-pages/not-found/not-found.component';
 import { InternalServerComponent } from './modules/error-pages/internal-server/internal-server.component';
 import { LazyLoadScriptService } from './shared/services/lazy-load-script.service';
-import { CarmemberEditComponent } from './modules/carmember/carmember-edit/carmember-edit/carmember-edit.component';
+import { CarmemberModule } from './modules/carmember/carmember.module';
 
 
 
@@ -37,8 +33,7 @@ import { CarmemberEditComponent } from './modules/carmember/carmember-edit/carme
     SidebarComponent,
     NotFoundComponent,
     InternalServerComponent,
-    SidebarRightComponent,
-    CarmemberEditComponent
+    SidebarRightComponent
     
   ],
   imports: [
@@ -47,9 +42,6 @@ import { CarmemberEditComponent } from './modules/carmember/carmember-edit/carme
   AuthModule,
   DashboardModule,
   CarmemberModule,
-  CarmemberaddModule,
-  CarmemberEditModule,
-  CarmemberdetailModule,
   HomeModule,
   AppRoutingModule,
   HttpClientModule

@@ -1,0 +1,107 @@
+<!-- breadcrumb -->
+<!-- <p>Carmember Work</p> -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="left-content">
+        <span class="main-content-title mg-b-0 mg-b-lg-1">NMA CarMemberList</span>
+    </div>
+    <div class="justify-content-center mt-2">
+        <ol class="breadcrumb breadcrumb-style3">
+            <li class="breadcrumb-item tx-15"><a href="home">CarDashboard</a></li>
+            <li class="breadcrumb-item tx-15"><a href="booking">CarBookingList</a></li>
+            <li class="breadcrumb-item active" aria-current="page">CarMemberList</li>
+        </ol>
+    </div>
+</div>
+<!-- /breadcrumb -->
+
+<!-- Counter Dashboard start -->
+<div class="card-body">
+    <div class="table-responsive"> 
+        <div class="btn-list">
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="counter-status p-4 md-mb-0">
+                        <div class="text-center mb-2">
+                            <svg class="about-icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#38cab3" d="M10.3125,16.09375a.99676.99676,0,0,1-.707-.293L6.793,12.98828A.99989.99989,0,0,1,8.207,11.57422l2.10547,2.10547L15.793,8.19922A.99989.99989,0,0,1,17.207,9.61328l-6.1875,6.1875A.99676.99676,0,0,1,10.3125,16.09375Z" opacity=".99"></path><path fill="#87dfd1" d="M12,2A10,10,0,1,0,22,12,10.01146,10.01146,0,0,0,12,2Zm5.207,7.61328-6.1875,6.1875a.99963.99963,0,0,1-1.41406,0L6.793,12.98828A.99989.99989,0,0,1,8.207,11.57422l2.10547,2.10547L15.793,8.19922A.99989.99989,0,0,1,17.207,9.61328Z"></path></svg>
+                        </div>
+                        <div class="text-center">
+                            <h2 class="counter mb-2">24</h2>
+                            <h6 class="mb-0 tx-muted">รถพร้อมใช้งาน</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3">
+                    <div class="counter-status p-4 md-mb-0">
+                        <div class="text-center mb-2">
+                            <svg class="about-icons" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"><circle cx="10" cy="8.5" r="5" fill="#fbb8c7"></circle><path fill="#fa95ac" d="M13.30884,12.22253C12.42566,13.00806,11.27496,13.5,10,13.5s-2.42566-0.49194-3.30884-1.27747C3.92603,13.48206,2,16.26324,2,19.5c0,0.00018,0,0.00037,0,0.00055C2.00012,20.05267,2.44788,20.50012,3,20.5h14c0.00018,0,0.00037,0,0.00055,0c0.55212-0.00012,0.99957-0.44788,0.99945-1C18,16.26324,16.07397,13.48206,13.30884,12.22253z"></path><path fill="#f74f75" d="M18.3335,13.5c-0.26526,0.0003-0.51971-0.10515-0.707-0.293l-1.3335-1.333c-0.38694-0.39399-0.38123-1.02706,0.01275-1.414c0.38897-0.38202,1.01228-0.38202,1.40125,0l0.62647,0.626l1.95953-1.96c0.39399-0.38694,1.02706-0.38123,1.414,0.01275c0.38202,0.38897,0.38202,1.01227,0,1.40125l-2.6665,2.667C18.85321,13.39485,18.59877,13.5003,18.3335,13.5z"></path></svg>
+                        </div>
+                        <div class="text-center">
+                            <h2 class="counter mb-2">21</h2>
+                            <h6 class="mb-0 tx-muted">รถส่งซ่อมบำรุง</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="text-wrap">
+                        <div class="btn-list align-items-center">
+                            <!-- <button type="button" class="btn btn-success btn-w m-1"><i class="fas fa-plus"></i> เพิ่มข้อมูล</button>
+                            <button type="button" class="btn btn-info btn-w m-1"><i class="fas fa-download"></i> ส่งออกข้อมูล</button> -->
+                            <a href="javascript:void(0);" class="btn btn-primary btn-w m-1"><i class="fas fa-plus"></i> เพิ่มข้อมูล</a>
+                            <a href="javascript:void(0);" class="btn btn-secondary btn-w m-1"><i class="fas fa-download"></i> ส่งออกข้อมูล</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-xl-3">
+                    <a href="/carmemberadd" class="btn btn-success"><i class="fas fa-plus"></i> เพิ่มข้อมูล</a>
+                    <a href="/carmemberedit" class="btn btn-info"><i class="fas fa-download"></i> ส่งออกข้อมูล</a>
+                </div> -->
+            </div>
+        </div>       
+<!-- Datable Start -->
+        <table class="table table-hover table-bordered text-nowrap border-bottom mb-0" id="responsiveDataTable">
+            <!-- class="table table-bordered text-nowrap border-bottom" -->
+            <thead>
+                <tr>
+                    <th class="wd-5p"></th>
+                    <th class="wd-5p">ลำดับ</th>
+                    <th class="wd-15p">รหัสยานพาหนะ</th>
+                    <th class="wd-20p">ทะเบียนรถ</th>
+                    <th class="wd-20p">ภาพตัวอย่าง</th>
+                    <th class="wd-20p">ข้อมูลทั่วไป</th>
+                    <th class="wd-10p">สถานะ</th>
+                </tr>            
+            </thead>
+            <tbody>  
+                <tr *ngFor="let row of carmemberlist; let i = index" class="hover:bg-gray-100">
+                    <!-- <td><a href="/carmemberdetail" class="btn btn-secondary" title="รายละเอียด"><i class="fa fa-ellipsis-v"></i></a></td>                     -->
+                    <td name="bstable-actions"><div class="d-flex align-items-center">
+                        <button id="carmemberdetail" type="button" class="btn btn-sm btn-def tx-muted">
+                            <a href="carmember/detail/{{row.car_id}}"><i class="fa fa-ellipsis-v"></i></a>
+                        </button>
+                        <button id="carmemberedit" type="button" class="btn btn-sm btn-def tx-muted">
+                            <a href="carmember/edit/{{row.car_id}}"><i class="fe fe-edit"> </i></a>
+                        </button>                       
+                    </div></td>                    
+                    <td><span class="tx-14">{{i+1}}</span></td>                    
+                    <td><span class="tx-14">{{row.hospcode}}-{{row.car_id}}</span></td>
+                    <td><span class="tx-14">{{row.car_number}}</span></td>
+                    <td class="flex items-center p-4 mr-12 space-x-6 whitespace-nowrap lg:p-5 lg:mr-0">
+                        <img class="w-8 h-8 rounded" src="data:image/jpg;base64, {{ row.car_img }}" alt="">
+                    </td>
+                    <td><span class="tx-14">ยี่ห้อ {{row.brand}} รุ่น {{row.model}} สี {{row.color}} ปี {{row.year}}</span></td>           
+                    <!-- <td>{{row.active}}</td> -->
+                    <td>
+                        <label class="m-0 p-0">
+                            <span class=" tx-14 me-2"></span>
+                            <input type="checkbox" class="custom-switch-input">
+                            <span class="custom-switch-indicator custom-switch-indicator-lg"></span>
+                        </label>
+                    </td>
+                </tr>                 
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Datable End -->
+
+

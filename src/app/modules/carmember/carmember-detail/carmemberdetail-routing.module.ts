@@ -4,9 +4,8 @@ import { LayoutMainComponent } from '@app/layouts/layout-main/layout-main.compon
 import { CarmemberdetailComponent } from './carmemberdetail/carmemberdetail.component';
 
 const routes: Routes = [
-
   {
-    path: 'carmemberdetail',
+    path: 'carmember/detail/:id',
     component: LayoutMainComponent,
     children: [
       { path: '', component: CarmemberdetailComponent },
