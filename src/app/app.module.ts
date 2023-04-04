@@ -1,3 +1,4 @@
+import { HomeModule } from './modules/home/home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -23,7 +24,7 @@ import { NotFoundComponent } from './modules/error-pages/not-found/not-found.com
 import { InternalServerComponent } from './modules/error-pages/internal-server/internal-server.component';
 import { LazyLoadScriptService } from './shared/services/lazy-load-script.service';
 import { CarmemberEditComponent } from './modules/carmember/carmember-edit/carmember-edit/carmember-edit.component';
-import { CarbookingComponent } from './modules/carbooking/carbooking.component';
+
 
 
 @NgModule({
@@ -37,8 +38,7 @@ import { CarbookingComponent } from './modules/carbooking/carbooking.component';
     NotFoundComponent,
     InternalServerComponent,
     SidebarRightComponent,
-    CarmemberEditComponent,
-    CarbookingComponent
+    CarmemberEditComponent
     
   ],
   imports: [
@@ -50,6 +50,7 @@ import { CarbookingComponent } from './modules/carbooking/carbooking.component';
   CarmemberaddModule,
   CarmemberEditModule,
   CarmemberdetailModule,
+  HomeModule,
   AppRoutingModule,
   HttpClientModule
 
