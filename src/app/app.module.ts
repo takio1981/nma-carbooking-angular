@@ -4,10 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { CoreModule } from './core/core.module';
 import { AuthModule } from './modules/auth/auth.module';
-import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-
 
 import { AppComponent } from './app.component';
 import { LayoutLoginComponent } from './layouts/layout-login/layout-login.component';
@@ -40,7 +38,6 @@ import { CarmemberModule } from './modules/carmember/carmember.module';
   BrowserModule,
   CoreModule,
   AuthModule,
-  DashboardModule,
   CarmemberModule,
   HomeModule,
   AppRoutingModule,
