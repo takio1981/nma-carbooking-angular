@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { ApiService } from './api.service';
@@ -10,8 +11,17 @@ const routes = {
   providedIn: 'root'
 })
 export class CarmemberlistService {
+  private httpOptions = { headers: new HttpHeaders().set('Content-Type', 'multipart/form-data') };
+  constructor(private apiService: ApiService, httpClient: HttpClient) { }
 
-  constructor(private apiService: ApiService) { }
+  private setHttpOption() {
+
+    this.httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+  }
 
   async getCarMemberList(){
     const url = `${routes.project}/getCarMemberList`
@@ -27,8 +37,22 @@ export class CarmemberlistService {
     return await lastValueFrom(data)
   }
 
+  async postCarMember(car_id: object){
+    const url = `${routes.project}/postCarMember`
+    const data =  this.apiService.postMultipart(url, car_id)
+
+    return await lastValueFrom(data)
+  }
+
+  async getCarMemberById(car_id: string){
+    const url = `${routes.project}/getCarMemberById/`+car_id
+    const data =  this.apiService.get(url)
+
+    return await lastValueFrom(data)
+  }
+
   async editCarMember(car_id: object){
-    const url = `${routes.project}/editPerson`
+    const url = `${routes.project}/editCarMember/`
     const data =  this.apiService.putMultipart(url, car_id)
 
     return await lastValueFrom(data)

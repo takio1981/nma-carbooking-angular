@@ -3,18 +3,20 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { CarmemberaddRoutingModule } from './carmemberadd-routing.module';
-import { CarmemberaddComponent } from './carmemberadd/carmemberadd.component';
+import { CarmemberAddComponent } from './carmemberadd/carmemberadd.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    CarmemberaddComponent
+    CarmemberAddComponent
   ],
   imports: [
     CommonModule,
     CarmemberaddRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule, ReactiveFormsModule
   ]
 })
-export class CarmemberaddModule { }
+export class CarmemberAddModule { }

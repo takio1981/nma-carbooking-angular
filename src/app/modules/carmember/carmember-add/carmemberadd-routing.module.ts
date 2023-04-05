@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutMainComponent } from '@app/layouts/layout-main/layout-main.component';
-import { CarmemberaddComponent } from './carmemberadd/carmemberadd.component';
+import { CarmemberAddComponent } from './carmemberadd/carmemberadd.component';
 
 
 const routes: Routes = [
   {
-    path: 'carmemberadd',
+    path: 'carmember/add',
     component: LayoutMainComponent,
     children: [
-      { path: '', component: CarmemberaddComponent },
+      { path: '', component: CarmemberAddComponent },
     ]
   }
 ];

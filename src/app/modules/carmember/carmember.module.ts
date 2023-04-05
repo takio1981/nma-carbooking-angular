@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { CarmemberRoutingModule } from './carmember-routing.module';
 import { CarmemberComponent } from './carmember-list/carmember.component';
-import { CarmemberaddModule } from './carmember-add/carmemberadd.module';
+import { CarmemberAddModule } from './carmember-add/carmemberadd.module';
 import { CarmemberEditModule } from './carmember-edit/carmember-edit.module';
 import { CarmemberdetailModule } from './carmember-detail/carmemberdetail.module';
 
@@ -17,7 +17,7 @@ import { CarmemberdetailModule } from './carmember-detail/carmemberdetail.module
   imports: [
     CommonModule,
     CarmemberRoutingModule,
-    CarmemberaddModule,
+    CarmemberAddModule,
     CarmemberEditModule,
     CarmemberdetailModule,
     HttpClientModule

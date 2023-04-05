@@ -1,4 +1,4 @@
-import { Component ,OnInit} from '@angular/core';
+import { Component ,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CarmemberlistService } from '@app/core/services/carmemberlist.service';
 import { LazyLoadScriptService } from '@app/shared/services/lazy-load-script.service';
@@ -9,7 +9,7 @@ import { UtcConverterService } from '@app/shared/services/utc-converter.service'
   templateUrl: './carmember.component.html',
   styleUrls: ['./carmember.component.scss']
 })
-export class CarmemberComponent {
+export class CarmemberComponent implements OnInit {
  
   carmemberlist: any = [];
   // constructor(private carmemberlistService: CarmemberlistService){}
@@ -51,7 +51,11 @@ export class CarmemberComponent {
   }
 
   async editCarMember(car_id: string){    
-    this.route.navigate(['/editCarMember/'+ car_id])
+    this.route.navigate(['/carmember/edit/'+ car_id])
+  }
+
+  async detailCarMember(car_id: string){    
+    this.route.navigate(['/carmember/detail/'+ car_id])
   }
 
 }

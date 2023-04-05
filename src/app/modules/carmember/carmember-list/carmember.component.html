@@ -1,24 +1,29 @@
-<!-- breadcrumb -->
-<!-- <p>Carmember Work</p> -->
 <div class="breadcrumb-header justify-content-between">
     <div class="left-content">
         <span class="main-content-title mg-b-0 mg-b-lg-1">NMA CarMemberList</span>
+        </div>
+        <div class="justify-content-center mt-2">
+            <ol class="breadcrumb breadcrumb-style3">
+                <li class="breadcrumb-item tx-15"><a href="home">CarDashboard</a></li>
+                <li class="breadcrumb-item tx-15"><a href="booking">CarBookingList</a></li>
+                <li class="breadcrumb-item active" aria-current="page">CarMemberList</li>
+            </ol>
+        </div>
     </div>
-    <div class="justify-content-center mt-2">
-        <ol class="breadcrumb breadcrumb-style3">
-            <li class="breadcrumb-item tx-15"><a href="home">CarDashboard</a></li>
-            <li class="breadcrumb-item tx-15"><a href="booking">CarBookingList</a></li>
-            <li class="breadcrumb-item active" aria-current="page">CarMemberList</li>
-        </ol>
+    <!-- /breadcrumb -->
+    
+    <div class="card-body">
+        <div class="text-wrap">
+            <div class="btn-list align-items-center">
+                <a href="carmember/add" class="btn btn-primary btn-w m-1"><i class="fas fa-plus"></i> เพิ่มข้อมูล</a>
+            </div>
+        </div>
     </div>
-</div>
-<!-- /breadcrumb -->
-
-<!-- Counter Dashboard start -->
-<div class="card-body">
-    <div class="table-responsive"> 
-        <div class="btn-list">
-            <div class="row">
+    <!-- Counter Dashboard start -->
+    <div class="card-body">
+        <div class="table-responsive"> 
+            <div class="btn-list">
+                <div class="row">
                 <div class="col-xl-8">
                     <div class="counter-status p-4 md-mb-0">
                         <div class="text-center mb-2">
@@ -41,61 +46,70 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-body">
-                    <div class="text-wrap">
-                        <div class="btn-list align-items-center">
-                            <!-- <button type="button" class="btn btn-success btn-w m-1"><i class="fas fa-plus"></i> เพิ่มข้อมูล</button>
-                            <button type="button" class="btn btn-info btn-w m-1"><i class="fas fa-download"></i> ส่งออกข้อมูล</button> -->
-                            <a href="javascript:void(0);" class="btn btn-primary btn-w m-1"><i class="fas fa-plus"></i> เพิ่มข้อมูล</a>
-                            <a href="javascript:void(0);" class="btn btn-secondary btn-w m-1"><i class="fas fa-download"></i> ส่งออกข้อมูล</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-xl-3">
-                    <a href="/carmemberadd" class="btn btn-success"><i class="fas fa-plus"></i> เพิ่มข้อมูล</a>
-                    <a href="/carmemberedit" class="btn btn-info"><i class="fas fa-download"></i> ส่งออกข้อมูล</a>
-                </div> -->
             </div>
         </div>       
 <!-- Datable Start -->
         <table class="table table-hover table-bordered text-nowrap border-bottom mb-0" id="responsiveDataTable">
             <!-- class="table table-bordered text-nowrap border-bottom" -->
-            <thead>
-                <tr>
+            <thead style="background-color: rgb(45, 70, 211);">
+                <tr class="text-center" style="color: white; font-size: larger;" height="40">
                     <th class="wd-5p"></th>
                     <th class="wd-5p">ลำดับ</th>
-                    <th class="wd-15p">รหัสยานพาหนะ</th>
-                    <th class="wd-20p">ทะเบียนรถ</th>
+                    <th class="wd-10p">รหัสรถ</th>
+                    <th class="wd-10p">เลขทะเบียนรถ</th>
+                    <th class="wd-10p">เลขทะเบียนครุภัณฑ์</th>
+                    <!-- <th class="wd-20p">ยี่ห้อ</th>
+                    <th class="wd-20p">รุ่น</th> -->
                     <th class="wd-20p">ภาพตัวอย่าง</th>
                     <th class="wd-20p">ข้อมูลทั่วไป</th>
-                    <th class="wd-10p">สถานะ</th>
+                    <th class="wd-5p">สถานะ</th>
                 </tr>            
             </thead>
             <tbody>  
                 <tr *ngFor="let row of carmemberlist; let i = index" class="hover:bg-gray-100">
-                    <!-- <td><a href="/carmemberdetail" class="btn btn-secondary" title="รายละเอียด"><i class="fa fa-ellipsis-v"></i></a></td>                     -->
-                    <td name="bstable-actions"><div class="d-flex align-items-center">
-                        <button id="carmemberdetail" type="button" class="btn btn-sm btn-def tx-muted">
-                            <a href="carmember/detail/{{row.car_id}}"><i class="fa fa-ellipsis-v"></i></a>
-                        </button>
-                        <button id="carmemberedit" type="button" class="btn btn-sm btn-def tx-muted">
-                            <a href="carmember/edit/{{row.car_id}}"><i class="fe fe-edit"> </i></a>
-                        </button>                       
-                    </div></td>                    
+                    <!-- <td>
+                        <a href="/carmember/detail/{{row.car_id}}" class="btn btn-secondary" title="รายละเอียด"><i class="fa fa-ellipsis-v"></i></a>
+                        <a href="/carmember/edit/{{row.car_id}}" class="btn btn-secondary" title="แก้ไข"><i class="fa fa-edit"></i></a>
+                    </td>                     -->
+                    <td name="bstable-actions">
+                        <div class="d-flex align-items-center">
+                            <button (click)="detailCarMember(row.car_id)" type="button" class="btn btn-circle btn-outline-primary flex-center me-1"><i class="fa fa-ellipsis-v tx-12"></i></button>
+                            <button (click)="editCarMember(row.car_id)" type="button" class="btn btn-circle btn-outline-primary flex-center me-1"><i class="fa fa-edit tx-12"></i></button>
+                            <!-- <button (click)="detailCarMember(row.car_id)" type="button" data-modal-toggle="carmember-modal" class="btn btn-md btn-def tx-muted">
+                                <i class="fa fa-ellipsis-v"></i>
+                            </button>                       
+                            <button (click)="editCarMember(row.car_id)" type="button" data-modal-toggle="carmember-modal" class="btn btn-sm btn-def tx-muted">
+                                <i class="fe fe-edit"> </i>
+                            </button> -->
+                            <!-- <a href="/carmember/detail/{{row.car_id}}" class="btn btn-md btn-def tx-muted" title="รายละเอียด"><i class="fa fa-ellipsis-v"></i></a>
+                            <a href="/carmember/edit/{{row.car_id}}" class="btn btn-md btn-def tx-muted" title="แก้ไข"><i class="fa fa-edit"></i></a> -->
+                     </div>
+                    </td>                    
                     <td><span class="tx-14">{{i+1}}</span></td>                    
                     <td><span class="tx-14">{{row.hospcode}}-{{row.car_id}}</span></td>
                     <td><span class="tx-14">{{row.car_number}}</span></td>
+                    <td><span class="tx-14">{{row.regist_num}}</span></td>
+                    <!-- <td><span class="tx-14">{{row.brand}}</span></td>
+                    <td><span class="tx-14">{{row.model}}</span></td> -->
                     <td class="flex items-center p-4 mr-12 space-x-6 whitespace-nowrap lg:p-5 lg:mr-0">
                         <img class="w-8 h-8 rounded" src="data:image/jpg;base64, {{ row.car_img }}" alt="">
                     </td>
-                    <td><span class="tx-14">ยี่ห้อ {{row.brand}} รุ่น {{row.model}} สี {{row.color}} ปี {{row.year}}</span></td>           
-                    <!-- <td>{{row.active}}</td> -->
+                    <td>
+                        <span class="tx-14">ยี่ห้อ {{row.brand}} รุ่น {{row.model}} สี {{row.color}} ปี {{row.year}}</span>
+                    </td>           
+                    <!-- <td class="p-4 text-base font-normal text-gray-900 whitespace-nowrap lg:p-5">
+                        <div class="flex items-center">
+                            <div class="h-2.5 w-2.5 rounded-full bg-green-400 mr-2"></div> Active
+                        </div>
+                    </td> -->
                     <td>
                         <label class="m-0 p-0">
-                            <span class=" tx-14 me-2"></span>
+                            <span class=" tx-14 me-2">{{row.active}}</span>
                             <input type="checkbox" class="custom-switch-input">
-                            <span class="custom-switch-indicator custom-switch-indicator-lg"></span>
+                            <span class="custom-switch-indicator custom-switch-indicator"></span>
                         </label>
+                        
+
                     </td>
                 </tr>                 
             </tbody>
@@ -103,5 +117,4 @@
     </div>
 </div>
 <!-- Datable End -->
-
 

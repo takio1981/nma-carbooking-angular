@@ -1,40 +1,36 @@
-<!-- <h1>carmemberadd works!</h1> -->
-<!-- row -->
+
 <div class="col-lg-12 col-md-12">
     <div class="card">
         <div class="card-header">
             <div class="card-title">เพิ่มข้อมูลรถยนต์</div>
         </div>
         <div class="card-body">
-            <form class="row needs-validation" novalidate>
+            <form #f="ngForm" action="#" class="row needs-validation" novalidate>
                 <div class="col-md-2 position-relative">
-                    <label for="car_id" class="form-label">ID</label>
-                    <input type="text" class="form-control" id="car_id" value="" disabled>
+                    <label for="hospcode" class="form-label">รหัสสถานพยาบาล</label>
+                    <input type="text" class="form-control" ngModel name= "hospcode" id="hospcode" value="" required>
                     <div class="valid-tooltip">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="col-md-2 position-relative">
-                    <label for="car_number" class="form-label">เลขทะเบียนรถยนต์</label>
-                    <input type="text" class="form-control" id="car_number" value="" required>
-                    <div class="valid-tooltip">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="col-md-2 position-relative">
-                    <label for="regist_num" class="form-label">เลขทะเบียนครุภัณฑ์</label>
-                    <div class="input-group has-validation">
-                        <!-- <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span> -->
-                        <input type="text" class="form-control" id="regist_num" required>
-                        <div class="invalid-tooltip">
-                            กรุณากรอกข้อมูลเลขทะเบียนครุภัณฑ์
-                        </div>
+                        รหัสสถานพยาบาล
                     </div>
                 </div>                
+                <div class="col-md-2 position-relative">
+                    <label for="car_number" class="form-label">เลขทะเบียนรถยนต์</label>
+                    <input type="text" class="form-control" ngModel name= "car_number" id="car_number" value="" required>
+                    <div class="valid-tooltip">
+                        เลขทะเบียนรถยนต์
+                    </div>
+                </div>
+                <!-- <div class="col-md-2 position-relative">
+                    <label for="brand" class="form-label">ยี่ห้อ</label>
+                    <input type="text" class="form-control" ngModel name= "brand" id="brand" value="" required>
+                    <div class="valid-tooltip">
+                        ยี่ห้อ
+                    </div>
+                </div> -->
                 <div class="col-md-3 position-relative">
                     <label for="brand" class="form-label">ยี่ห้อ</label>
-                    <select class="form-select" id="brand" required>
-                        <option selected disabled value="">เลือกยี่ห้อรถ....</option>
+                    <select class="form-select" ngModel name= "brand" id="brand" required>
+                        <option selected disabled value=""></option>
                         <option value="1">Toyota</option>
                         <option value="2">Mitsubichi</option>
                         <option value="3">Mazda</option>
@@ -44,31 +40,90 @@
                         กรุณาเลือกยี่ห้อรถของท่าน.
                     </div>
                 </div>
+                <!-- <div class="col-md-2 position-relative">
+                    <label for="type_id" class="form-label">ประเภท</label>
+                    <input type="text" class="form-control" ngModel name= "type_id" id="type_id" value="" required>
+                    <div class="valid-tooltip">
+                        ประเภท
+                    </div>
+                </div> -->
                 <div class="col-md-3 position-relative">
+                    <label for="type_id" class="form-label">ประเภท</label>
+                    <select class="form-select" ngModel name= "type_id" id="type_id" required>
+                        <option selected disabled value=""></option>
+                        <option value="1">รถตู้</option>
+                        <option value="2">รถกระบะ</option>
+                        <option value="3">รถเก๋ง</option>
+                        <option value="4">รถจักรยานยนต์</option>
+                    </select>
+                    <div class="invalid-tooltip">
+                        กรุณาเลือกประเภทรถของท่าน.
+                    </div>
+                </div>
+                <div class="col-md-2 position-relative">
+                    <label for="regist_num" class="form-label">เลขทะเบียนครุภัณฑ์</label>
+                    <div class="input-group has-validation">
+                        <!-- <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span> -->
+                        <input type="text" class="form-control" ngModel name= "regist_num" id="regist_num" required>
+                        <div class="invalid-tooltip">
+                            กรุณากรอกข้อมูลเลขทะเบียนครุภัณฑ์
+                        </div>
+                    </div>
+                </div>                
+                <!-- <div class="col-md-3 position-relative">
                     <label for="model" class="form-label">รุ่น</label>
-                    <input type="text" class="form-control" id="model" required>
+                    <input type="text" class="form-control" ngModel name= "model" id="model" required>
                     <div class="invalid-tooltip">
                         กรุณาใส่รุ่นของรถ
                     </div>
+                </div> -->
+                <div class="col-md-3 position-relative">
+                    <label for="model" class="form-label">รุ่น</label>
+                    <select class="form-select" ngModel name= "model" id="model" required>
+                        <option selected disabled value=""></option>
+                        <option value="VIGO">VIGO</option>
+                        <option value="VIVO">VIVO</option>
+                        <option value="Revo">Revo</option>
+                        <option value="Altis">Altis</option>
+                        <option value="Yaris">Yaris</option>
+                        <option value="Cross">Cross</option>
+                        <option value="Camry">Camry</option>
+                    </select>
+                    <div class="invalid-tooltip">
+                        กรุณาเลือกรุ่นรถของท่าน.
+                    </div>
                 </div>
-                <div class="col-md-2 position-relative">
+                <!-- <div class="col-md-2 position-relative">
                     <label for="year" class="form-label">ปีผลิต</label>
-                    <input type="text" class="form-control" id="year" required>
+                    <input type="text" class="form-control" ngModel name= "year" id="year" required>
                     <div class="invalid-tooltip">
                         กรุณาใส่ปีผลิตรถ
                     </div>
-                </div>
-                <div class="col-md-2 position-relative">
+                </div> -->
+                <!-- <div class="col-md-2 position-relative">
                     <label for="year" class="form-label">ปีจัดซื้อ</label>
-                    <input type="text" class="form-control" id="year" required>
+                    <input type="text" class="form-control" ngModel name= "year" id="year" required>
                     <div class="invalid-tooltip">
                         กรุณาใส่ปีจัดซื้อของรถ
                     </div>
+                </div> -->
+                <div class="col-md-3 position-relative">
+                    <label for="year" class="form-label">ปี</label>
+                    <select class="form-select" ngModel name= "year" id="year" required>
+                        <option selected disabled value=""></option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                    <div class="invalid-tooltip">
+                        กรุณาเลือกยี่ห้อรถของท่าน.
+                    </div>
                 </div>
                 <div class="col-md-3 position-relative">
-                    <label for="brand" class="form-label">สีตัวถังรถ</label>
-                    <select class="form-select" id="brand" required>
-                        <option selected disabled value="">เลือกสีตัวถังรถ....</option>
+                    <label for="color" class="form-label">สีตัวถังรถ</label>
+                    <select class="form-select" ngModel name= "color" id="color" required>
+                        <option selected disabled value=""></option>
                         <option value="1">เทา</option>
                         <option value="2">ขาว</option>
                         <option value="3">ดำ</option>
@@ -78,39 +133,48 @@
                         กรุณาเลือกสีตัวถังรถของท่าน.
                     </div>
                 </div>
-                <div class="col-md-12 position-relative">
+                <!-- <div class="col-md-2 position-relative">
+                    <label for="color" class="form-label">รหัสสีตัวถังรถ</label>
+                    <input type="text" class="form-control" ngModel name= "color" id="color">
+                    <div class="invalid-tooltip">
+                        รหัสสีตัวถังรถ
+                    </div>
+                </div> -->
+                <div class="col-md-8 position-relative">
                     <label for="detail" class="form-label">รายละเอียดอื่นๆ</label>
-                    <input type="text" class="form-control" id="detail">
+                    <input type="text" class="form-control" ngModel name= "detail" id="detail">
                     <div class="invalid-tooltip">
                         รายละเอียดข้อมูลอื่นๆ
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4">
-                    <label for="detail" class="form-label">รูปภาพหน้ารถ</label>
-                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
+                <!-- <div class="col-md-1 position-relative">
+                    <label for="active" class="form-label">สถานะ</label>
+                    <input type="text" class="form-control" ngModel name= "active" id="active">
+                    <div class="invalid-tooltip">
+                        สถานะ
+                    </div>
+                </div> -->
+                <div class="col-md-3 position-relative">
+                    <label for="active" class="form-label">สถานะ</label>
+                    <select class="form-select" ngModel name= "active" id="active" required>
+                        <option selected disabled value=""></option>
+                        <option value="Y">ใช้งาน</option>
+                        <option value="N">ไม่ใช้งาน</option>
+                    </select>
+                    <div class="invalid-tooltip">
+                        กรุณาเลือกสถานะรถของท่าน.
+                    </div>
                 </div>
-                <div class="col-sm-12 col-md-4">
-                    <label for="detail" class="form-label">รูปภาพด้านซ้าย</label>
-                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
+                <div class="col-sm-4 col-md-4">
+                    <label for="car_img" class="form-label">รูปภาพหน้ารถ</label>
+                    <input type="file" ngModel observeFile (change)="fileChanged($event)" name="car_img" id="car_img" class="dropify" data-height="200">
                 </div>
-                <div class="col-sm-12 col-md-4">
-                    <label for="detail" class="form-label">รูปภาพด้านขวา</label>
-                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <label for="detail" class="form-label">รูปภาพภายใน 1</label>
-                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <label for="detail" class="form-label">รูปภาพภายใน 2</label>
-                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <label for="detail" class="form-label">รูปภาพภายใน 3</label>
-                    <div class="dropify-wrapper touch-fallback" style="height: 212px;"><div class="dropify-message"><span class="file-icon"> <p>Drag and drop a file here or click</p></span><p class="dropify-error">Ooops, something wrong appended.</p></div><div class="dropify-loader"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" class="dropify" data-height="200"><button type="button" class="dropify-clear">Remove</button><div class="dropify-preview"><span class="dropify-render"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner"></span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
-                </div>
+                <!-- <div class="col-md-12 position-relative">
+                    <label for="car_img " class="block mb-2 text-sm font-medium text-gray-900 ">IMAGE</label>
+                    <input type="file" ngModel observeFile (change)="fileChanged($event)" name="car_img" id="car_img" class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5 " placeholder=" " required=" ">
+                </div> -->
                 <div class="col-12">
-                    <button class="btn btn-primary mt-3" type="submit">บันทึก</button>
+                    <button (click)="postCarMember(f)" class="btn btn-primary mt-3" type="submit">บันทึก</button>
                 </div>
             </form>
         </div>
