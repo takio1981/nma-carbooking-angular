@@ -7,7 +7,6 @@ import { AuthModule } from './modules/auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
-
 import { AppComponent } from './app.component';
 import { LayoutLoginComponent } from './layouts/layout-login/layout-login.component';
 import { LayoutMainComponent } from './layouts/layout-main/layout-main.component';
