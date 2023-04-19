@@ -15,7 +15,7 @@ export class DashboardComponent {
   dashBoard:any = [];
   car_ready: string;
   carmember: string;
-  driver_round: string;
+  drive_round: string;
   wait_approved: string;
 
 
@@ -37,10 +37,10 @@ export class DashboardComponent {
     console.log(5555555);
     if(rs){
       //console.log(rs[0])
+    this.carmember=rs[0].carmember;
+    this.drive_round=rs[0].drive_round;
     this.car_ready=rs[0].car_ready;
-    this.car_ready=rs[0].driver_round;
-    this.car_ready=rs[0].carmember;
-    this.car_ready=rs[0].wait_approved;
+    this.wait_approved=rs[0].wait_approved;
     }
   }
 
