@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { CarmemberlistService } from '@app/core/services/carmemberlist.service';
 @Component({
   selector: 'app-carmemberadd',
-  templateUrl: './carmemberadd.component.html',
-  styleUrls: ['./carmemberadd.component.scss']
+  templateUrl: './carmember-add.component.html',
+  styleUrls: ['./carmember-add.component.scss']
 })
 export class CarmemberAddComponent {
 

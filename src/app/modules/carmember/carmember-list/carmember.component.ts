@@ -1,9 +1,8 @@
 import { Component ,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CarmemberlistService } from '@app/core/services/carmemberlist.service';
 import { LazyLoadScriptService } from '@app/shared/services/lazy-load-script.service';
 import { UtcConverterService } from '@app/shared/services/utc-converter.service';
-
-import { CarmemberlistService } from '@app/core/services/carmemberlist.service';
 
 @Component({
   selector: 'app-carmember',
@@ -49,6 +48,11 @@ export class CarmemberComponent implements OnInit {
        
     })
 
+  }
+
+  async addCarMember(){    
+
+    this.route.navigate(['/addCarMember/'])
   }
 
   async editCarMember(car_id: string){    
