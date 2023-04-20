@@ -12,7 +12,7 @@ const routes = {
 })
 export class CarmemberlistService {
   private httpOptions = { headers: new HttpHeaders().set('Content-Type', 'multipart/form-data') };
-  constructor(private apiService: ApiService, httpClient: HttpClient) { }
+  constructor(private apiService: ApiService,private httpClient: HttpClient) { }
 
   private setHttpOption() {
 
@@ -20,7 +20,7 @@ export class CarmemberlistService {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
-    }
+    };
   }
 
   async getCarMemberList(){
@@ -52,9 +52,10 @@ export class CarmemberlistService {
   }
 
   async editCarMember(car_id: object){
-    const url = `${routes.project}/editCarMember/`
+    const url = `${routes.project}/editCarMember`
     const data =  this.apiService.putMultipart(url, car_id)
 
     return await lastValueFrom(data)
   }
+
 }

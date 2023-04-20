@@ -22,7 +22,7 @@ export class CarmemberAddComponent {
 
   file: any;
   file_name: any;
-  constructor(private carmemberService: CarmemberlistService, private router: Router){}
+  constructor(private carmemberlistService: CarmemberlistService, private router: Router){}
 
   async postCarMember(f: NgForm){
 
@@ -40,7 +40,7 @@ export class CarmemberAddComponent {
     formData.append('active', f.value.active)
     formData.append('car_img', this.file)
 
-    await this.carmemberService.postCarMember(formData).then((r) => {
+    await this.carmemberlistService.postCarMember(formData).then((r) => {
       console.log(r)
       this.router.navigate(['/carmember']);
     })

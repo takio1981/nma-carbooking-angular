@@ -6,6 +6,7 @@ import { CoreModule } from './core/core.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+// import { CarmemberModule } from './modules/carmember/carmember.module';
 
 import { AppComponent } from './app.component';
 import { LayoutLoginComponent } from './layouts/layout-login/layout-login.component';
@@ -17,9 +18,8 @@ import { SidebarRightComponent } from './layouts/sidebar-right/sidebar-right.com
 import { NotFoundComponent } from './modules/error-pages/not-found/not-found.component';
 import { InternalServerComponent } from './modules/error-pages/internal-server/internal-server.component';
 import { LazyLoadScriptService } from './shared/services/lazy-load-script.service';
-import { CarmemberModule } from './modules/carmember/carmember.module';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarmemberModule } from './modules/carmember/carmember-list/carmember.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { CarmemberModule } from './modules/carmember/carmember.module';
     SidebarComponent,
     NotFoundComponent,
     InternalServerComponent,
-    SidebarRightComponent
+    SidebarRightComponent,
     
   ],
   imports: [
@@ -41,8 +41,9 @@ import { CarmemberModule } from './modules/carmember/carmember.module';
   CarmemberModule,
   HomeModule,
   AppRoutingModule,
+  FormsModule,
+  ReactiveFormsModule,
   HttpClientModule
-
   ],
   providers: [LazyLoadScriptService],
   bootstrap: [AppComponent]

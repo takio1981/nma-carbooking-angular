@@ -5,13 +5,12 @@ import { CarmemberEditComponent } from './carmember-edit/carmember-edit.componen
 
 const routes: Routes = [
   {
-    path: 'carmember/edit/:id',
+    path: 'editCarMember/:car_id',
     component: LayoutMainComponent,
     children: [
       { path: '', component: CarmemberEditComponent },
     ]
   }
-
 ];
 
 @NgModule({

@@ -14,39 +14,22 @@
                     </div>
                 </div>                
                 <div class="col-md-2 position-relative">
+                    <label for="regist_num" class="form-label">เลขทะเบียนครุภัณฑ์</label>
+                    <div class="input-group has-validation">
+                        <!-- <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span> -->
+                        <input type="text" class="form-control" ngModel name= "regist_num" id="regist_num" required>
+                        <div class="invalid-tooltip">
+                            กรุณากรอกข้อมูลเลขทะเบียนครุภัณฑ์
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md-2 position-relative">
                     <label for="car_number" class="form-label">เลขทะเบียนรถยนต์</label>
                     <input type="text" class="form-control" ngModel name= "car_number" id="car_number" value="" required>
                     <div class="valid-tooltip">
                         เลขทะเบียนรถยนต์
                     </div>
-                </div>
-                <!-- <div class="col-md-2 position-relative">
-                    <label for="brand" class="form-label">ยี่ห้อ</label>
-                    <input type="text" class="form-control" ngModel name= "brand" id="brand" value="" required>
-                    <div class="valid-tooltip">
-                        ยี่ห้อ
-                    </div>
-                </div> -->
-                <div class="col-md-3 position-relative">
-                    <label for="brand" class="form-label">ยี่ห้อ</label>
-                    <select class="form-select" ngModel name= "brand" id="brand" required>
-                        <option selected disabled value=""></option>
-                        <option value="1">Toyota</option>
-                        <option value="2">Mitsubichi</option>
-                        <option value="3">Mazda</option>
-                        <option value="4">Honda</option>
-                    </select>
-                    <div class="invalid-tooltip">
-                        กรุณาเลือกยี่ห้อรถของท่าน.
-                    </div>
-                </div>
-                <!-- <div class="col-md-2 position-relative">
-                    <label for="type_id" class="form-label">ประเภท</label>
-                    <input type="text" class="form-control" ngModel name= "type_id" id="type_id" value="" required>
-                    <div class="valid-tooltip">
-                        ประเภท
-                    </div>
-                </div> -->
+                </div>                
                 <div class="col-md-3 position-relative">
                     <label for="type_id" class="form-label">ประเภท</label>
                     <select class="form-select" ngModel name= "type_id" id="type_id" required>
@@ -60,23 +43,19 @@
                         กรุณาเลือกประเภทรถของท่าน.
                     </div>
                 </div>
-                <div class="col-md-2 position-relative">
-                    <label for="regist_num" class="form-label">เลขทะเบียนครุภัณฑ์</label>
-                    <div class="input-group has-validation">
-                        <!-- <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span> -->
-                        <input type="text" class="form-control" ngModel name= "regist_num" id="regist_num" required>
-                        <div class="invalid-tooltip">
-                            กรุณากรอกข้อมูลเลขทะเบียนครุภัณฑ์
-                        </div>
-                    </div>
-                </div>                
-                <!-- <div class="col-md-3 position-relative">
-                    <label for="model" class="form-label">รุ่น</label>
-                    <input type="text" class="form-control" ngModel name= "model" id="model" required>
+                <div class="col-md-3 position-relative">
+                    <label for="brand" class="form-label">ยี่ห้อ</label>
+                    <select class="form-select" ngModel name= "brand" id="brand" required>
+                        <option selected disabled value=""></option>
+                        <option value="1">Toyota</option>
+                        <option value="2">Mitsubichi</option>
+                        <option value="3">Mazda</option>
+                        <option value="4">Honda</option>
+                    </select>
                     <div class="invalid-tooltip">
-                        กรุณาใส่รุ่นของรถ
+                        กรุณาเลือกยี่ห้อรถของท่าน.
                     </div>
-                </div> -->
+                </div>
                 <div class="col-md-3 position-relative">
                     <label for="model" class="form-label">รุ่น</label>
                     <select class="form-select" ngModel name= "model" id="model" required>
@@ -92,21 +71,7 @@
                     <div class="invalid-tooltip">
                         กรุณาเลือกรุ่นรถของท่าน.
                     </div>
-                </div>
-                <!-- <div class="col-md-2 position-relative">
-                    <label for="year" class="form-label">ปีผลิต</label>
-                    <input type="text" class="form-control" ngModel name= "year" id="year" required>
-                    <div class="invalid-tooltip">
-                        กรุณาใส่ปีผลิตรถ
-                    </div>
-                </div> -->
-                <!-- <div class="col-md-2 position-relative">
-                    <label for="year" class="form-label">ปีจัดซื้อ</label>
-                    <input type="text" class="form-control" ngModel name= "year" id="year" required>
-                    <div class="invalid-tooltip">
-                        กรุณาใส่ปีจัดซื้อของรถ
-                    </div>
-                </div> -->
+                </div>                
                 <div class="col-md-3 position-relative">
                     <label for="year" class="form-label">ปี</label>
                     <select class="form-select" ngModel name= "year" id="year" required>
@@ -133,27 +98,6 @@
                         กรุณาเลือกสีตัวถังรถของท่าน.
                     </div>
                 </div>
-                <!-- <div class="col-md-2 position-relative">
-                    <label for="color" class="form-label">รหัสสีตัวถังรถ</label>
-                    <input type="text" class="form-control" ngModel name= "color" id="color">
-                    <div class="invalid-tooltip">
-                        รหัสสีตัวถังรถ
-                    </div>
-                </div> -->
-                <div class="col-md-8 position-relative">
-                    <label for="detail" class="form-label">รายละเอียดอื่นๆ</label>
-                    <input type="text" class="form-control" ngModel name= "detail" id="detail">
-                    <div class="invalid-tooltip">
-                        รายละเอียดข้อมูลอื่นๆ
-                    </div>
-                </div>
-                <!-- <div class="col-md-1 position-relative">
-                    <label for="active" class="form-label">สถานะ</label>
-                    <input type="text" class="form-control" ngModel name= "active" id="active">
-                    <div class="invalid-tooltip">
-                        สถานะ
-                    </div>
-                </div> -->
                 <div class="col-md-3 position-relative">
                     <label for="active" class="form-label">สถานะ</label>
                     <select class="form-select" ngModel name= "active" id="active" required>
@@ -165,14 +109,17 @@
                         กรุณาเลือกสถานะรถของท่าน.
                     </div>
                 </div>
+                <div class="col-md-12 position-relative">
+                    <label for="detail" class="form-label">รายละเอียดอื่นๆ</label>
+                    <input type="text" class="form-control" ngModel name= "detail" id="detail">
+                    <div class="invalid-tooltip">
+                        รายละเอียดข้อมูลอื่นๆ
+                    </div>
+                </div>                
                 <div class="col-sm-4 col-md-4">
-                    <label for="car_img" class="form-label">รูปภาพหน้ารถ</label>
+                    <label for="car_img" class="form-label">รูปภาพรถ</label>
                     <input type="file" ngModel observeFile (change)="fileChanged($event)" name="car_img" id="car_img" class="dropify" data-height="200">
                 </div>
-                <!-- <div class="col-md-12 position-relative">
-                    <label for="car_img " class="block mb-2 text-sm font-medium text-gray-900 ">IMAGE</label>
-                    <input type="file" ngModel observeFile (change)="fileChanged($event)" name="car_img" id="car_img" class="shadow-lg-sm border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-2 focus:ring-fuchsia-50 focus:border-fuchsia-300 block w-full p-2.5 " placeholder=" " required=" ">
-                </div> -->
                 <div class="col-12">
                     <button (click)="postCarMember(f)" class="btn btn-primary mt-3" type="submit">บันทึก</button>
                 </div>

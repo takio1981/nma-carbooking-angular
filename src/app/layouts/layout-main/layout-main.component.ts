@@ -56,5 +56,9 @@ export class LayoutMainComponent {
     this._lazyLoadService.loadScript('/assets/plugins/fancyuploder/jquery.fancy-fileupload.js');
     this._lazyLoadService.loadScript('/assets/plugins/fancyuploder/fancy-uploader.js');
 
+		// <!--Internal Counters -->
+		this._lazyLoadService.loadScript('/assets/plugins/counters/waypoints.min.js');
+		this._lazyLoadService.loadScript('/assets/plugins/counters/counterup.min.js');
+
   }
 }

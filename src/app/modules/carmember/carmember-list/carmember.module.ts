@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { CarmemberRoutingModule } from './carmember-routing.module';
+// import { CarmemberAddModule } from './carmember-add/carmemberadd.module';
+// import { CarmemberEditModule } from './carmember-edit/carmember-edit.module';
 import { CarmemberComponent } from './carmember-list/carmember.component';
-import { CarmemberAddModule } from './carmember-add/carmemberadd.module';
-import { CarmemberEditModule } from './carmember-edit/carmember-edit.module';
-import { CarmemberdetailModule } from './carmember-detail/carmemberdetail.module';
+import { CarmemberAddModule } from '../carmember-add/carmemberadd.module';
+import { CarmemberEditModule } from '../carmember-edit/carmember-edit.module';
+// import { CarmemberComponent } from './carmember-list/carmember-list/carmember.component';
 
 
 
@@ -19,7 +21,6 @@ import { CarmemberdetailModule } from './carmember-detail/carmemberdetail.module
     CarmemberRoutingModule,
     CarmemberAddModule,
     CarmemberEditModule,
-    CarmemberdetailModule,
     HttpClientModule
   ]
 })
